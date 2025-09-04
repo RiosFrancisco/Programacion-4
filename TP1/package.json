@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node src/index.ts",
-    "dev": "node --watch ./src/index.ts",
+    "dev": "tsx --watch src/index.ts",
     "build": "npx tsc --watch"
   },
   "keywords": [],
@@ -14,7 +14,7 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^24.3.0",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   }
 }
