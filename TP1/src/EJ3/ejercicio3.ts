@@ -3,7 +3,7 @@ import { EmpleadoMedioTiempo } from "./empleadoMedioTiempo";
 import { EmpleadoTiempoCompleto } from "./empleadoTiempoCompleto";
 
 export function ejercicio3() {
-  console.log("----Ejercicio 3----");
+  console.log("\n----Ejercicio 3----\n");
 
   const empleados: Empleado[] = [
     new EmpleadoTiempoCompleto("Analia", 80000),

@@ -4,7 +4,7 @@ import { FiguraGeometrica } from "./figuraGeometrica.abstract";
 import { Triangulo } from "./triangulo";
 
 export function ejercicio2(): void {
-  console.log("----Ejercicio 2----");
+  console.log("\n----Ejercicio 2----\n");
 
   const cuadrado: FiguraGeometrica = new Cuadrado(5);
   const circulo: FiguraGeometrica = new Circulo(6);
