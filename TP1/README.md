@@ -15,3 +15,18 @@
 
 #### UML Eercicio 5
 ![umlEj5](src/EJ5/UMLEJ5.png)
+
+--- 
+## Guia instalacion
+
+Instalación dependencias
+```
+    npm install
+```
+
+Ejecutar modo desarrollador
+```
+    npm run dev
+```
+
+Se ejecutaran todos los ejercicios
