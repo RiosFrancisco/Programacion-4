@@ -1,13 +1,11 @@
 import express from "express";
 import cors from "cors";
 
-class Server {
+export class MakeApp {
   public app: express.Application;
-  public port: number;
 
-  constructor(port: number) {
+  constructor() {
     this.app = express();
-    this.port = port;
     this.middlewares();
     this.routes();
   }
@@ -20,6 +18,24 @@ class Server {
     this.app.use("/orders", () => {
       console.log("Orders route");
     });
+  }
+  // Rutas
+  // app.use("/orders", ordersRoute);
+  // app.use("/order/:id", ordersIdRoute);
+  // app.use("/orders/:id/cancel", cancelRouote);
+  // app.use("/orders?status", statusRoute);
+}
+
+class Server {
+  public app: express.Application;
+  public port: number;
+  public makeApp: MakeApp;
+
+  constructor(port: number) {
+    this.app = express();
+    this.port = port;
+
+    this.makeApp = new MakeApp();
   }
 
   start(callback: () => void) {
