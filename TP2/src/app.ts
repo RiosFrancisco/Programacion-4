@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import orderRoutes from "./routes/order.routes";
 
 export class MakeApp {
   public app: express.Application;
@@ -10,11 +11,12 @@ export class MakeApp {
     this.routes();
   }
 
-  middlewares() {
+  private middlewares() {
+    this.app.use(cors());
     this.app.use(express.json({ limit: " 150mb" }));
   }
 
-  routes() {
+  private routes() {
     this.app.use("/orders", () => {
       console.log("Orders route");
     });

@@ -2,7 +2,7 @@ import { OrderCrud } from "../models/interface/order.interface";
 import { Order, OrderStatus } from "../models/order";
 import mockOrder from "../models/mockOrder";
 
-class OrderServices implements OrderCrud {
+export class OrderServices implements OrderCrud {
   getOrders(): Order[] {
     return mockOrder.getOrders();
   }
@@ -19,3 +19,4 @@ class OrderServices implements OrderCrud {
     return mockOrder.cancelOrder(id);
   }
 }
+
