@@ -1,13 +1,13 @@
-import { Order } from "../models/order";
+import { Order, OrderSize, OrderStatus } from "../models/order";
 
 export class OrderBuilder {
-  private id: string = "1";
+  private id: number = 1;
   private size: "S" | "M" | "L" = "M";
   private toppings: string[] = ["cheese", "tomato"];
   private address: string = "Default Address";
   private status: "delivered" | "preparing" | "cancelled" = "preparing";
 
-  public setId(id: string): OrderBuilder {
+  public setId(id: number): OrderBuilder {
     this.id = id;
     return this;
   }
@@ -37,10 +37,10 @@ export class OrderBuilder {
   public build(): Order {
     return new Order(
       this.id,
-      this.size,
+      this.size as OrderSize,
       this.toppings,
       this.address,
-      this.status
+      this.status as OrderStatus
     );
   }
 }

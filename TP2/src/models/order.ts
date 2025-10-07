@@ -1,8 +1,16 @@
-export type OrderSize = "S" | "M" | "L";
-export type OrderStatus = "delivered" | "preparing" | "cancelled";
+export enum OrderSize {
+  S = "S",
+  M = "M",
+  L = "L",
+}
+export enum OrderStatus {
+  DELIVERED = "delivered",
+  PREPARING = "preparing",
+  CANCELLED = "cancelled",
+}
 
 export class Order {
-  protected id: string;
+  protected id: number;
   protected size: OrderSize;
   protected price: number;
   protected toppings: string[];
@@ -10,7 +18,7 @@ export class Order {
   protected status: OrderStatus;
 
   constructor(
-    id: string,
+    id: number,
     size: OrderSize,
     toppings: string[],
     address: string,
@@ -24,7 +32,7 @@ export class Order {
     this.status = status;
   }
 
-  public getId(): string {
+  public getId(): number {
     return this.id;
   }
 

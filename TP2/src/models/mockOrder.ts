@@ -17,15 +17,15 @@ export class MockOrder implements OrderCrud {
   }
 
   createOrder(order: Order): void {
-    order.setPrice(calculatePrice(order.getSize(), order.getToppings()))
+    order.setPrice(calculatePrice(order.getSize(), order.getToppings()));
     this.orders.push(order);
   }
 
-  getOrderById(id: string): Order | undefined {
+  getOrderById(id: number): Order | undefined {
     return this.orders.find((order) => order.getId() === id);
   }
 
-  cancelOrder(id: string): string {
+  cancelOrder(id: number): string {
     const order = this.getOrderById(id);
     if (!order) {
       throw new Error("Orden no encontrada");
@@ -36,7 +36,7 @@ export class MockOrder implements OrderCrud {
     if (order.getStatus() === "cancelled") {
       throw new Error("El pedido ya fue cancelado");
     }
-    order.setStatus("cancelled");
+    order.setStatus("cancelled" as OrderStatus);
     return "Pedido cancelado";
   }
 }
