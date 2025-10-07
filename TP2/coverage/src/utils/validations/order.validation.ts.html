@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/app.ts</title>
+    <title>Code coverage report for src/utils/validations/order.validation.ts</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> app.ts</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/utils/validations</a> order.validation.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/28</span>
+                <span class='fraction'>0/27</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/28</span>
+                <span class='fraction'>0/27</span>
             </div>
         
             
@@ -95,17 +95,7 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -116,16 +106,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -135,45 +116,49 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import express from "express";<span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span>
-import cors from "cors";
-<span class="cstat-no" title="statement not covered" >import orderRoutes from "./routes/order.routes";</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { z } from "zod";<span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export class MakeApp {</span>
-<span class="cstat-no" title="statement not covered" >  public app: express.Application;</span>
+<span class="cstat-no" title="statement not covered" >export const SizeSchema = z</span>
+<span class="cstat-no" title="statement not covered" >  .string()</span>
+<span class="cstat-no" title="statement not covered" >  .refine((size) =&gt; ["S", "M", "L"].includes(size), {</span>
+<span class="cstat-no" title="statement not covered" >    message: "El tamaño debe ser 'S', 'M' o 'L'",</span>
+<span class="cstat-no" title="statement not covered" >  });</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  constructor() {</span>
-<span class="cstat-no" title="statement not covered" >    this.app = express();</span>
-<span class="cstat-no" title="statement not covered" >    this.middlewares();</span>
-<span class="cstat-no" title="statement not covered" >    this.routes();</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >export const StatusSchema = z</span>
+<span class="cstat-no" title="statement not covered" >  .string()</span>
+<span class="cstat-no" title="statement not covered" >  .refine(</span>
+<span class="cstat-no" title="statement not covered" >    (status) =&gt; ["delivered", "preparing", "cancelled"].includes(status),</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >      message: "El estado debe ser 'delivered', 'preparing' o 'cancelled'",</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >  );</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  middlewares() {</span>
-<span class="cstat-no" title="statement not covered" >    this.app.use(express.json({ limit: " 150mb" }));</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >export const CreateOrderSchema = z.object({</span>
+<span class="cstat-no" title="statement not covered" >  id: z.int().min(1, "El id no puede estar vacío"),</span>
+<span class="cstat-no" title="statement not covered" >  size: SizeSchema,</span>
+<span class="cstat-no" title="statement not covered" >  toppings: z.array(z.string()).min(1, "Debe tener al menos un topping"),</span>
+<span class="cstat-no" title="statement not covered" >  address: z.string().min(10, "La dirección debe tener al menos 10 caracteres"),</span>
+<span class="cstat-no" title="statement not covered" >  status: StatusSchema,</span>
+<span class="cstat-no" title="statement not covered" >});</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  routes() {</span>
-<span class="cstat-no" title="statement not covered" >    this.app.use("/orders", orderRoutes);</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" >export const StatusQuerySchema = z.object({</span>
+<span class="cstat-no" title="statement not covered" >  status: StatusSchema,</span>
+<span class="cstat-no" title="statement not covered" >});</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >class Server {</span>
-<span class="cstat-no" title="statement not covered" >  public port: number;</span>
-<span class="cstat-no" title="statement not covered" >  public makeApp: MakeApp;</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  constructor(port: number) {</span>
-<span class="cstat-no" title="statement not covered" >    this.port = port;</span>
-<span class="cstat-no" title="statement not covered" >    this.makeApp = new MakeApp();</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  start(callback: () =&gt; void) {</span>
-<span class="cstat-no" title="statement not covered" >    this.makeApp.app.listen(this.port, callback);</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" >}</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >export default Server;</span>
+<span class="cstat-no" title="statement not covered" >export const OrderIdSchema = z.object({</span>
+<span class="cstat-no" title="statement not covered" >  id: z.string().min(1, "El id no puede estar vacío"),</span>
+<span class="cstat-no" title="statement not covered" >});</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -183,14 +168,14 @@ import cors from "cors";
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at 2025-10-07T00:22:33.681Z
             </div>
-        <script src="../prettify.js"></script>
+        <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../sorter.js"></script>
-        <script src="../block-navigation.js"></script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
     </body>
 </html>
     
