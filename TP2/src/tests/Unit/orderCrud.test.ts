@@ -1,8 +1,8 @@
 import { describe, test, expect, beforeEach } from "vitest";
-import { OrderStatus } from "../models/order";
+import { OrderStatus } from "../../models/order";
 
-import { OrderBuilder } from "../utils/OrderBuilder";
-import { OrderServices } from "../services/order.service";
+import { OrderBuilder } from "../../utils/OrderBuilder";
+import { OrderServices } from "../../services/order.service";
 
 describe("prueba de ejemplo", () => {
   let crud: OrderServices;
