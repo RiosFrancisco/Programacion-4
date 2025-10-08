@@ -11,13 +11,17 @@ export class MakeApp {
   }
 
   middlewares() {
-    this.app.use(express.json({ limit: " 150mb" }));
+    this.app.use(express.json({ limit: "150mb" }));
   }
 
   routes() {
+    this.app.get("/", (_req, res) => res.sendStatus(200));
+
     this.app.use("/orders", orderRoutes);
   }
 }
+
+export const app = new MakeApp().app;
 
 class Server {
   public port: number;
