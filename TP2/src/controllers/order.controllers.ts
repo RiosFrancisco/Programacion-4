@@ -37,7 +37,7 @@ export class OrderControllers {
   createOrder = (req: Request, res: Response) => {
     const result = CreateOrderSchema.safeParse(req.body);
     if (!result.success) {
-      return res.status(400).json({
+      return res.status(422).json({
         message: result.error.issues[0]?.message,
       });
     }
@@ -91,11 +91,11 @@ export class OrderControllers {
       const orderStatus = this.orderService.getOrderById(id)?.getStatus();
 
       if (orderStatus === "delivered") {
-        return res.status(400).json({ message: "El pedido ya fue entregado" });
+        return res.status(409).json({ message: "El pedido ya fue entregado" });
       }
 
       if (orderStatus === "cancelled") {
-        return res.status(400).json({ message: "El pedido ya fue cancelado" });
+        return res.status(409).json({ message: "El pedido ya fue cancelado" });
       }
 
       const result = this.orderService.cancelOrder(id);

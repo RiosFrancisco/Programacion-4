@@ -16,7 +16,7 @@ export const StatusSchema = z
   );
 
 export const CreateOrderSchema = z.object({
-  id: z.int().min(1, "El id no puede estar vacío"),
+  id: z.number().min(1, "El id no puede estar vacío"),
   size: SizeSchema,
   toppings: z.array(z.string()).min(1, "Debe tener al menos un topping"),
   address: z.string().min(10, "La dirección debe tener al menos 10 caracteres"),
