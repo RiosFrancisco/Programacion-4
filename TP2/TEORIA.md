@@ -132,6 +132,7 @@ CA2:
  - Accion: POST /orders/1/cancel
  - Resultado: 200 ok; body {id:1, producto: "pizza", status: "canceled"}
  - Test: tests/cancelOrder "cambia estado cenceled"
+
 ERR1:
 - Caso/Descripcion: Intentas cancelar una orden ya entregada
 - Precondicion: Servicio con [{id: 1, producto: "pizza", status: "delivered"}]
