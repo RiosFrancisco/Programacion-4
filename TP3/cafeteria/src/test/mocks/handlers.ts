@@ -1,9 +1,6 @@
-// src/test/mocks/handlers.ts
 import { http, HttpResponse } from "msw";
 
-// Definimos los manejadores de las peticiones que queremos interceptar
 export const handlers = [
-  // 🟢 Intercepta GET a '/api/menu'
   http.get("http://localhost/api/menu", () => {
     return HttpResponse.json(
       [
@@ -15,12 +12,10 @@ export const handlers = [
     );
   }),
 
-  // 🟢 Intercepta POST a '/api/orders'
   http.post("http://localhost/api/orders", async ({ request }) => {
     const body = await request.json();
     console.log("Pedido recibido:", body);
 
-    // Retorna respuesta simulada del backend
     return HttpResponse.json(
       { message: "Pedido confirmado" },
       { status: 200 }
