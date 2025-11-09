@@ -1,0 +1,93 @@
+# AI Assistant Files
+CLAUDE.md
+.claude/
+.cursor/
+.cursorrules
+.github/copilot-instructions.md
+.aider*
+.anthropic/
+
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+backend/.env
+frontend/.env
+
+# Build Output
+dist/
+build/
+*/dist/
+*/build/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+*.coverage
+.nyc_output/
+test-results/
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+mysql_data/
+
+# Uploaded Files (vulnerable app specific)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+
+# React / Vite
+.vite/
+frontend/.vite/
+frontend/dist/
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.npm
+.eslintcache
+.node_repl_history
+.yarn-integrity
