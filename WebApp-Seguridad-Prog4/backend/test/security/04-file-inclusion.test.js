@@ -11,7 +11,7 @@ describe('Seguridad: Local File Inclusion (LFI)', () => {
     app = express();
     app.use(express.json());
     app.use('/api', vulnerabilityRoutes);
-    
+
     // Crear directorio de prueba
     const filesDir = path.join(__dirname, '../../files');
     if (!fs.existsSync(filesDir)) {
@@ -119,7 +119,7 @@ describe('📝 INSTRUCCIONES PARA CORREGIR FILE INCLUSION', () => {
        - Usar mensajes de error genéricos
        - No mostrar rutas absolutas
     `;
-    
+
     console.log(instrucciones);
     expect(true).toBe(true);
   });

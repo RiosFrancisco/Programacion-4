@@ -1,0 +1,1 @@
+Este es un archivo público accesible para todos los usuarios.
