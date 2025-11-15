@@ -109,37 +109,8 @@ expect(res.status).toBe(200);
 expect(res.body.nombre).toBe('Ana');
 
 8) 
-CA1:
- - Caso/Descripción: Obtener orden por id
- - Precondición: Servicio con: [{id: 1, producto: "pizza", status="pending"}, {id: 2, producto: "empanadas", status="canceled"}]
- - Input: id = 1
- - Acción: GET /orders/1
- - Resutado esperado: 200 body [{id: 1, producto: "pizza", status="pending"}]
- - Test: tests/getOrderById "filtra por id"
+![Matriz de casos](https://github.com/user-attachments/assets/b472352b-54f0-4377-9a78-d96fe5cb566e)
 
-CA2:
- - Caso/Descripción: Obtener todas las ordenes por estado "pending"
- - Precondición: Servicio con: [{id: 1, producto: "pizza", status="pending"}, {id: 2, producto: "empanadas", status="canceled"}]
- - Input: status="pending"
- - Acción: GET /orders?status="pending"
- - Resutado: 200 body: [{id: 1, producto: "pizza", status="pending"}]
- - Test: tests/getOrdersByStatus "filtra por estado"
-
- CA3: 
- - Caso/Descripción: Cancelar perdido valido.
- - Precondición: Servicio con [{id: 1, producto: "pizza", status: "pending"}, {id: 2, producto: "empandas", status: "canceled"}]
- - Input: id= 1
- - Accion: POST /orders/1/cancel
- - Resultado: 200 ok; body {id:1, producto: "pizza", status: "canceled"}
- - Test: tests/cancelOrder "cambia estado cenceled"
-
-ERR1:
-- Caso/Descripcion: Intentas cancelar una orden ya entregada
-- Precondicion: Servicio con [{id: 1, producto: "pizza", status: "delivered"}]
-- Input: id= 1
-- Accion: POST /orders/1/cancel
-- Resultado: 409 Conflict; body {error: "cannot cancel delivered order"
-- Test: tests/canelOrder "no permite cancelar delivered"  
 
 9) No es una buena practica buscar la cobertura de codigo al 100% porque eso puede generar falsa sensacion de seguridad, donde tener la cobertura alta no significa que los tests sean buenos.
 podes hacer test inutiles donde no aporten un valor real.
