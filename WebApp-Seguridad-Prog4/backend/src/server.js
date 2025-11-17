@@ -7,6 +7,8 @@ const path = require('path');
 const { connectWithRetry } = require('./config/database');
 const { initializeFiles } = require('./utils/fileInit');
 const { errorHandler, notFound } = require('./middleware/errorHandler');
+const csrf = require('csurf');
+const cookieParser = require('cookie-parser');
 
 // Importar rutas
 const routes = require('./routes');
@@ -18,16 +20,21 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 // Servir archivos estáticos (uploads)
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // Session para CSRF (vulnerable - sin token CSRF)
 app.use(session({
-  secret: 'vulnerable-secret',
+  secret: 'test-secret',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: false }
+  cookie: {
+    httpOnly: true,
+    sameSite: 'strict',     
+    secure: false           
+  }
 }));
 
 // Usar todas las rutas con prefijo /api
