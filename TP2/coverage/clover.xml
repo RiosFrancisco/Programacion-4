@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1759965899453" clover="3.2.0">
-  <project timestamp="1759965899453" name="All files">
-    <metrics statements="360" coveredstatements="252" conditionals="56" coveredconditionals="50" methods="48" coveredmethods="38" elements="464" coveredelements="340" complexity="0" loc="360" ncloc="360" packages="9" files="13" classes="13"/>
+<coverage generated="1763399590400" clover="3.2.0">
+  <project timestamp="1763399590400" name="All files">
+    <metrics statements="373" coveredstatements="254" conditionals="56" coveredconditionals="50" methods="49" coveredmethods="38" elements="478" coveredelements="342" complexity="0" loc="373" ncloc="373" packages="9" files="13" classes="13"/>
     <package name="src">
       <metrics statements="35" coveredstatements="20" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="4"/>
       <file name="app.ts" path="/home/juan/ProgrIV/Programacion-4/TP2/src/app.ts">
@@ -135,7 +135,7 @@
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="30" coveredstatements="13" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="43" coveredstatements="15" conditionals="3" coveredconditionals="2" methods="3" coveredmethods="2"/>
       <file name="conditionalQuery.ts" path="/home/juan/ProgrIV/Programacion-4/TP2/src/middlewares/conditionalQuery.ts">
         <metrics statements="17" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
@@ -157,20 +157,33 @@
         <line num="19" count="0" type="stmt"/>
       </file>
       <file name="validate.ts" path="/home/juan/ProgrIV/Programacion-4/TP2/src/middlewares/validate.ts">
-        <metrics statements="13" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
+        <metrics statements="26" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.models">

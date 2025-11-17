@@ -31,7 +31,7 @@ describe("prueba de ejemplo", () => {
   });
 
   test("addOrder", () => {
-    const newOrder = new OrderBuilder().setId(3).build();
+    const newOrder = new OrderBuilder().setId(3).setAddress("789 Oak St").setSize("S").setStatus("preparing").setToppings(["cheese", "mushrooms"]).build();
     crud.createOrder(newOrder);
     console.log(newOrder);
     expect(crud.getOrders()).toHaveLength(3);
