@@ -8,7 +8,6 @@
     "test": "jest --watchAll",
     "test:ci": "jest --ci",
     "test:coverage": "jest --coverage",
-    "test:tres": "npx jest 03-csrf-protection.test.js --watchAll",
     "test:security": "node test/run-security-tests.js"
   },
   "dependencies": {
