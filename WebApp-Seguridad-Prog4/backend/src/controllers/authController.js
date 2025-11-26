@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { db } = require('../config/database');
 
-// VULNERABLE: Sin rate limiting para prevenir brute force
+
 const login = async (req, res) => {
   const { username, password } = req.body;
   
@@ -51,7 +51,7 @@ const verifyToken = (req, res) => {
   const token = req.headers.authorization?.split(' ')[1];
   
   if (!token) {
-    return res.status(401).json({ error: 'No token provided' });
+    return res.status(401).json({ error: 'Credenciales Invalidas' });
   }
   
   try {
@@ -59,20 +59,20 @@ const verifyToken = (req, res) => {
     req.session.userId = decoded.id;
     res.json({ valid: true, user: decoded });
   } catch (error) {
-    res.status(401).json({ error: 'Invalid token' });
+    res.status(401).json({ error: 'token Invalido' });
   }
 };
 
-// VULNERABLE: Blind SQL Injection
+
 const checkUsername = (req, res) => {
   const { username } = req.body;
   
-  // VULNERABLE: SQL injection que permite inferir información
+  
   const query = `SELECT COUNT(*) as count FROM users WHERE username = '${username}'`;
   
   db.query(query, (err, results) => {
     if (err) {
-      // VULNERABLE: Expone errores de SQL
+      
       return res.status(500).json({ error: err.message });
     }
     

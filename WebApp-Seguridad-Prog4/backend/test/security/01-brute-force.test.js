@@ -1,6 +1,7 @@
 const request = require('supertest');
 const express = require('express');
 const authRoutes = require('../../src/routes/auth');
+const { resetBruteForce } = require('../../src/middleware/bruteForce.middleware');
 
 describe('Seguridad: Brute Force', () => {
   let app;
@@ -9,7 +10,11 @@ describe('Seguridad: Brute Force', () => {
     app = express();
     app.use(express.json());
     app.use('/api', authRoutes);
+
+
+    resetBruteForce();
   });
+
 
   test('❌ DEBE FALLAR: El endpoint de login debe tener protección contra fuerza bruta', async () => {
     const loginAttempts = [];
