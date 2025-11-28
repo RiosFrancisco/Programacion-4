@@ -11,6 +11,9 @@
     "test:security": "node test/run-security-tests.js"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.7",
@@ -18,11 +21,13 @@
     "csrf": "^3.1.0",
     "express": "^4.21.2",
     "express-session": "^1.17.3",
+    "jsdom": "^27.2.0",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.6.0",
     "node-cache": "^5.1.2",
-    "svg-captcha": "^1.4.0"
+    "svg-captcha": "^1.4.0",
+    "vitest": "^4.0.14"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
